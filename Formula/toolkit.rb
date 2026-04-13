@@ -18,6 +18,21 @@ class Toolkit < Formula
     bash_completion.install libexec/"completions/toolkit.bash" => "toolkit"
   end
 
+  def caveats
+    <<~'EOS'
+      toolkit
+       _____  _  __
+      |_   _|| |/ /
+        | |  | ' /
+        |_|  |_|\_\
+
+      Start in a repo:
+        toolkit init
+        toolkit status
+        toolkit help
+    EOS
+  end
+
   test do
     assert_match "toolkit v", shell_output("#{bin}/toolkit version")
   end
