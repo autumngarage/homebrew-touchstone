@@ -1,8 +1,8 @@
 class Touchstone < Formula
   desc "Delivery baseline for agent-driven repositories: adopt, validate, steer, ship"
   homepage "https://github.com/autumngarage/touchstone"
-  url "https://github.com/autumngarage/touchstone/archive/refs/tags/v3.7.11.tar.gz"
-  sha256 "b2c8fcdab108679b8f6e88928f840732b586404864b41eb81c730ebaf7461c4a"
+  url "https://github.com/autumngarage/touchstone/archive/refs/tags/v3.7.12.tar.gz"
+  sha256 "2ccf5456b60bd14c130e91feba144fbc93c563f08cff0e86da37a1f8ed864aa0"
   license "MIT"
 
   depends_on "gh"
