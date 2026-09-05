@@ -31,7 +31,17 @@ class Touchstone < Formula
         touchstone pr status <n>
         touchstone pr merge <n> --head <sha>
 
-      brew upgrade updates this tool only; it never modifies a repository.
+      To upgrade later, prefer:
+        touchstone upgrade
+
+      It runs brew upgrade and then reinstalls the machine steering, so the
+      contract your agents read matches the CLI. A bare `brew upgrade` refreshes
+      only this tool: the steering already installed under ~/.claude, ~/.codex
+      and ~/.gemini keeps whatever contract it was installed with, silently, and
+      your agents keep reading it. `touchstone steering check` reports the skew;
+      `touchstone steering install` repairs it.
+
+      Neither command ever modifies a repository.
     EOS
   end
 
